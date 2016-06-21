@@ -6,4 +6,4 @@
 debug: false
 #data_dir_polling_interval: 60
 data_dir: <%= scope['crane::data_dir'] %>
-endpoint: <%= @fqdn %>:<%= @port %>
+endpoint: <%= @fqdn %>:<%= scope['crane::port'] %>

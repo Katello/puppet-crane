@@ -1,20 +1,14 @@
 require 'spec_helper'
 
 describe 'crane' do
+  on_supported_os.each do |os, facts|
+    context "on #{os}" do
+      let :facts do
+        facts.merge(:concat_basedir => '/tmp')
+      end
 
- context 'on redhat' do
-    let :facts do
-      {
-        :concat_basedir             => '/tmp',
-        :operatingsystem            => 'RedHat',
-        :operatingsystemrelease     => '6.4',
-        :operatingsystemmajrelease  => '6.4',
-        :osfamily                   => 'RedHat',
-      }
+      it { should contain_class('crane::install') }
+      it { should contain_class('crane::config') }
     end
-
-    it { should contain_class('crane::install') }
-    it { should contain_class('crane::config') }
   end
-
 end
