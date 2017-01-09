@@ -1,3 +1,7 @@
+:warning: puppet-crane is deprecated, it is now in [katello/pulp](http://github.com/katello/puppet-pulp) as pulp::crane :warning:
+
+<hr />
+
 [![Puppet Forge](http://img.shields.io/puppetforge/v/katello/crane.svg)](https://forge.puppetlabs.com/katello/crane)
 [![Build Status](https://travis-ci.org/Katello/puppet-crane.svg?branch=master)](https://travis-ci.org/Katello/puppet-crane)
 ####Table of Contents
