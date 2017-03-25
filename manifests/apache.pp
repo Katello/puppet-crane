@@ -9,10 +9,9 @@ class crane::apache {
   apache::vhost { 'crane':
     servername          => $crane::fqdn,
     docroot             => '/usr/share/crane/',
-    wsgi_script_aliases =>
-                          {
-                            '/' => '/usr/share/crane/crane.wsgi',
-                          },
+    wsgi_script_aliases => {
+      '/' => '/usr/share/crane/crane.wsgi',
+    },
     port                => $crane::port,
     priority            => '03',
     ssl                 => true,

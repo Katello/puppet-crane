@@ -20,7 +20,7 @@ class crane (
   $ca_cert  = $crane::params::ca_cert,
   $port     = $crane::params::port,
   $data_dir = $crane::params::data_dir,
-  ) inherits crane::params {
+) inherits crane::params {
 
   class { '::crane::install': } ~>
   class { '::crane::apache': } ~>
